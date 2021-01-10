@@ -1,0 +1,110 @@
+
+@import './reset.less';
+@import './mixin.less';
+@import 'element-ui/lib/theme-chalk/index.css';
+
+// amap样式重置
+// 去掉地图版权
+.amap-logo {
+  display:none!important;
+}
+.amap-copyright{
+  display:none!important;
+}
+.amap-info-contentContainer{
+  width: 464px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  .amap-info-close{
+    color: #fff;
+    top: 10px;
+  }
+  .amap-info-content {
+    border: 1px solid @blue;
+    padding: 0;
+    .infoWindow{
+      .title{
+        background: @blue;
+        color: #fff;
+        padding: 15px 20px;
+        font-size: @menu2-font;
+      }
+      table{
+        padding: 5px 20px;
+        color: @menu2-color;
+        min-width: 464px;
+        td{
+          height: 37px;
+          font-size: @normal;
+        }
+      }
+    }
+  }
+}
+.marker{
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  width: 26px;
+  height: 34px;
+  background: url(http://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.png) no-repeat;
+  background-size: contain;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.circleMarker{
+  background: #1890FF;
+  width: 70px;
+  height: 70px;
+  line-height: 20px;
+  border-radius: 35px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+// element样式重置
+.el-breadcrumb {
+  margin-bottom: 15px;
+}
+.el-pagination {
+  float: right;
+  margin-top: 15px;
+}
+.el-table thead tr th {
+  background: #F6F6F6;
+}
+.el-select{
+  width: 100%;
+  .el-input {
+    width: 100%!important;
+  }
+}
+.el-textarea__inner {
+  width: 100%!important;
+}
+.el-form--inline .el-form-item {
+  margin-right: 20px;
+}
+// .el-date-editor.el-input, .el-date-editor.el-input__inner {
+//   width: 100%;
+// }
+.el-input__inner, .el-textarea__inner, .el-button {
+  border-radius: 0;
+}
+// .el-button--medium {
+//   border-radius: 2px;
+// }
+.el-range-editor.el-input__inner {
+  padding: 4px 0px 4px 11px;
+}
+
+// 禁用按钮样式
+.el-input.is-disabled .el-input__inner, .el-radio__input.is-disabled+span.el-radio__label {
+  color: #333;
+}
+
+@media screen and (max-height: 1572px) {
+
+}
